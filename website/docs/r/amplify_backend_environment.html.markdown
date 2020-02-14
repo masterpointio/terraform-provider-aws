@@ -18,7 +18,7 @@ resource "aws_amplify_app" "app" {
 }
 
 resource "aws_amplify_backend_environment" "prod" {
-  app_id           = aws_amplify_app.app.id
+  app_id           = "${aws_amplify_app.app.id}"
   environment_name = "prod"
 
   deployment_artifacts = "app-prod-deployment"
